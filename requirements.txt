@@ -1,0 +1,28 @@
+# IS_Radiogenomic_Fusion_MRVI — Research Hardware Dependencies
+# ==============================================================================
+
+# Core AI & Image Processing
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+opencv-python-headless
+scikit-image
+scipy
+pandas
+simpleitk
+
+# Radiomics & XAI Suite
+pyradiomics
+shap
+pytorch-grad-cam
+matplotlib
+seaborn
+tqdm
+
+# Statistical & Bio (Bridge to R)
+jensenshannon
+lxml
+
+# System Orchestration
+concurrent-futures
+pathlib

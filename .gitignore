@@ -1,26 +1,34 @@
-# IS_Radiogenomic_Fusion_MRVI | .gitignore
+# IS_Radiogenomic_Fusion_MRVI .gitignore
+# ==============================================================================
 
-# Imaging data
+# Data Redaction Safety (Strict)
+*.npy
+*.npz
 *.nii
 *.nii.gz
 *.dcm
-*.dicom
-
-# Molecular data
-*.h5ad
-*.loom
 *.rds
-
-# Python
-__pycache__/
-*.pyc
-
-# Local Configs
-.env
-local_settings.py
-
-# Large results
-results/
-outputs/
 *.csv
-*.xlsx
+*dataset*
+*samples*
+
+# Temp & Cache
+process_tmp/
+__pycache__/
+.ipynb_checkpoints/
+*.log
+
+# Results & Output (Large)
+XAI_TRIPLE_GATE_RESULTS/
+XAI_SWARM_AUDITS_PHASE2/
+XAI_OPTIMIZED_TRIPLE_GATE_FINAL/
+XAI_MEGA_AUDITS_SUPREME/
+XAI_OMEGA_STRESS_TEST_REPORT.csv
+results/
+atlas/
+codex/
+
+# Environment
+vnv/
+.env
+.vscode/

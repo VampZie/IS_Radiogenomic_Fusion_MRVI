@@ -1,99 +1,109 @@
-# IS_Radiogenomic_Fusion_MRVI
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=900&color=F37335&background=FFFFFF00&center=true&vCenter=true&width=600&lines=Welcome+to+IS_Radiogenomic_Fusion_MRVI+%F0%9F%A7%AC;Precision+Ischemic+Stroke+Radioscopy;Molecularly+Calibrated+Neuro-Mapping..." alt="Animated Welcome Banner" />
+</p>
 
-> **Molecular Radiomics Vulnerability Index (MRVI): An Unsupervised Radiogenomic Pipeline for Ischemic Stroke Characterization.**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Python%20%7C%20PyTorch-3776AB?logo=python)]()
-[![Workflow](https://img.shields.io/badge/Workflow-Swarm%20HPC-orange)]()
-
----
-
-## 🔬 Scientific Abstract
-
-This repository implements a multi-modal radiogenomic pipeline designed to quantify ischemic tissue vulnerability by fusing deep-learning-based lesion segmentation with single-cell transcriptomic (scRNA-seq) markers. 
-
-The core innovation is the **Molecular Radiomics Vulnerability Index (MRVI)** — a quantitative metric that maps high-dimensional radiomic textures (GLCM, GLSZM) onto cluster-specific molecular stressors. The pipeline utilizes an unsupervised **"Juror" Ensemble** for lesion segmentation, refined by a **Triple-Gate anatomical snapping protocol** to ensure clinical fidelity without requiring large labeled datasets.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Research_Core-orange?style=for-the-badge&logo=googlescholar" alt="Research Status" />
+  <img src="https://img.shields.io/badge/Logic-Triple--Gate_Ensemble-blue?style=for-the-badge&logo=brain" alt="Logic Type" />
+  <img src="https://img.shields.io/badge/Workflow-Radiogenomic_Fusion-brightgreen?style=for-the-badge&logo=databricks" alt="Workflow" />
+</p>
 
 ---
 
-## 🛠️ Pipeline Architecture
+<div align="center">
+  <h2>⚡ IS_Radiogenomic_Fusion_MRVI ⚡</h2>
+  <sub>The Molecular Radiomics Vulnerability Index (MRVI): A multi-modal framework for anchoring AI imaging features to single-cell transcriptomic priors.</sub>
+</div>
 
+---
+
+> [!CAUTION]
+> **STRICT INTELLECTUAL PROPERTY NOTICE**
+>
+> This repository contains proprietary scientific architecture (The Triple-Gate Protocol & MRVI Engine). **Unauthorized replication, conceptual imitation, or architectural copying for independent publication is strictly prohibited.** This code is the intellectual property of **Vidit Zainith** and serves as a prior-art methodological reference.
+
+---
+
+## 📁 The 5-Phase Fusion Pipeline
+
+```mermaid
+graph TD
+    %% --- STYLE DEFINITIONS ---
+    classDef stage1 fill:#1f1f1f,stroke:#333,color:#fff
+    classDef stage2 fill:#613cbc,stroke:#333,color:#fff
+    classDef stage3 fill:#007acc,stroke:#333,color:#fff
+    classDef stage4 fill:#d65d0e,stroke:#333,color:#fff
+    classDef stage5 fill:#15803d,stroke:#333,color:#fff
+
+    subgraph S1 ["Phase 1: Binary Jury"]
+        P1["<b>Ensemble Classification</b><br/>(3-Model Juror Decision)"]:::stage1
+        P1 --> G1["<b>Triple-Gate Snapping</b><br/>(HU-Physics Anchoring)"]:::stage1
+    end
+
+    subgraph S2 ["Phase 2: Swarm Segmentation"]
+        G1 --> P2["<b>12-Way Consensus Matrix</b><br/>(3 Model x 4 XAI)"]:::stage2
+        P2 --> G2["<b>Recursive Swarm Scout</b><br/>(PSO Core Discovery)"]:::stage2
+    end
+
+    subgraph S3 ["Phase 3: scRNA Discovery"]
+        P3["<b>5-Pillar Transcriptomics</b><br/>(hsa/rno Invariant Pipeline)"]:::stage3
+        P3 --> G3["<b>Functional Prior Extraction</b><br/>(UCell Signaling)"]:::stage3
+    end
+
+    subgraph S4 ["Phase 4: Radiogenomic Fusion"]
+        G2 & G3 --> P4["<b>MRVI Generation</b><br/>(Molecularly-Calibrated Index)"]:::stage4
+    end
+
+    subgraph S5 ["Phase 5: Spatial Atlas"]
+        P4 --> P5["<b>SpatioSystems Hub</b><br/>(Anatomical Cascade Mapping)"]:::stage5
+    end
 ```
+
+---
+
+## 📁 Repository Structure
+
+```text
 IS_Radiogenomic_Fusion_MRVI/
 │
-├── 01_lesion_segmentation/       ← Unsupervised "Juror" Ensemble
-│   ├── jurors/                   ← Consensus model definitions (3-Model Jury)
-│   ├── triple_gate/              ← Anatomical snapping & noise suppression
-│   └── evaluate/                 ← Robust metrics suite (DICE, IoU, HD95)
-│
-├── 02_radiomic_extraction/       ← Swarm-Gated Feature Engineering
-│   ├── pyradiomics_suite/        ← Shape, Intensity, and Texture extraction
-│   └── swarm_feat_extract.py     ← 50-thread parallel orchestration script
-│
-├── 03_molecular_fusion/          ← scRNA-seq + Imaging Integration
-│   ├── mapping/                  ← Voxel-to-Cluster coordinate registration
-│   └── mrvi_engine/              ← Molecular Radiomics Vulnerability Index logic
-│
-├── orchestration/                ← End-to-end pipeline launcher
-└── examples/                     ← Sample ROI data + template markers
+├── phase1_binary_classification/    ← Triple-Gate HU physics & 3-model ensemble
+├── phase2_lesion_segmentation/      ← 12-way consensus & PSO Swarm Scout
+├── phase3_scRNA_analysis/           ← 5-Pillar scRNA-seq Discovery Suite
+├── phase4_radiogenomic_fusion/      ← MRVI generation (Imaging-Molecular bridge)
+├── phase5_spatial_transformation/   ← SpatioSystems Atlas mapping
+├── orchestration/                   ← Master parallel harvesters & launchers
+└── requirements.txt                 ← SOTA Bio-AI Hardware dependencies
 ```
 
 ---
 
-## 🚀 Key Methodologies
+## 💡 Key Innovations
 
-### 1. The Juror Ensemble & Triple-Gate Protocol
-Unlike traditional supervised U-Nets, this pipeline uses a **Juror Ensemble** that reaches a consensus on ischemic core boundaries. The **Triple-Gate Protocol** then snaps these boundaries to anatomical brain atlases, filtering out intensity noise and anatomical artifacts.
-
-- **Gate 1**: Signal-to-Noise Intensity Thresholding
-- **Gate 2**: Morphological Continuity Enforcer
-- **Gate 3**: Anatomical Atlas Registration (Snapping)
-
-### 2. High-Dimensional Radiomic Swarm
-We extract 1,200+ features per lesion using a **50-thread CPU swarm architecture**. Features include:
-- **First-order statistics** (Voxel intensity distributions)
-- **Texture** (GLCM, Gray Level Co-occurrence Matrix)
-- **Geometry** (Shape-based vulnerability markers)
-
-### 3. Molecular Radiomics Vulnerability Index (MRVI)
-The MRVI fuses these radiomic signatures with scRNA-seq derived molecular scores. It identifies "Vulnerability Hotspots" where texture-based entropy predicts high molecular stress, providing a bridge between macro-level imaging and micro-level genomic state.
+| Framework | Innovation |
+|-----------|------------|
+| **Triple-Gate Protocol** | Anchors "AI Hotspots" to Hounsfield Unit (HU) anatomical reality. |
+| **Recursive Swarm Scout** | PSO-optimized search for the primary ischemic core within noise. |
+| **MRVI Index** | Weights digital texture disorganization with single-cell molecular priors. |
+| **SpatioSystems Hub** | Patient-specific NVU cascade detection anchored to brain territories. |
 
 ---
 
-## 📊 Performance Metrics
+## 🛠️ Research Arsenal & Compute
 
-| Metric | Target | Description |
-|--------|---------|-------------|
-| **DICE** | > [REDACTED] | Spatial overlap consistency |
-| **IoU** | > [REDACTED] | Jaccard Index for segmentation precision |
-| **HD95** | < [REDACTED] | 95th percentile Hausdorff Distance |
-| **SSIM** | > [REDACTED] | Structural Similarity Index Measure |
+![PyTorch](https://img.shields.io/badge/PyTorch-SOTA_AI-EE4C2C?style=flat-square&logo=pytorch)
+![Radiomics](https://img.shields.io/badge/Radiomics-PyRadiomics-blue?style=flat-square)
+![Seurat](https://img.shields.io/badge/Seurat-scRNA--seq-276DC3?style=flat-square&logo=r)
+![HPC](https://img.shields.io/badge/HPC-70_Thread_Swarm-red?style=flat-square)
 
 ---
 
-## 📦 Installation & Setup
+## 📜 Legal & IP Attribution
 
-```bash
-# Clone
-git clone https://github.com/YOUR_USERNAME/IS_Radiogenomic_Fusion_MRVI.git
-cd IS_Radiogenomic_Fusion_MRVI
-
-# Environment
-conda create -n radiogenomics python=3.9
-conda activate radiogenomics
-pip install -r requirements.txt
-```
+- **Principal Architect:** **Vidit Zainith ([@VampZie](https://github.com/VampZie))**
+- **Temporal Attribution:** Methodological archive established as of **April 21, 2026**.
+- **Portfolio Reference:** This repository is a high-fidelity methodological demonstration of clinical radiogenomic fusion.
 
 ---
-
-## Reference
-
-This framework was developed for characterizing molecular-radiomic interplay in ischemic stroke lesions. The MRVI represents a novel integration strategy for translating radiomic texture into pathophysiological insights.
-
-> *Unsupervised Juror Ensembles reveal molecular vulnerability hotspots: The MRVI framework.*
-
----
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=2000&color=F37335&background=FFFFFF00&center=true&vCenter=true&lines=All+Systems+Operational!+%F0%9F%AB%A7" alt="Happy Analyzing Banner" />
+</div>
