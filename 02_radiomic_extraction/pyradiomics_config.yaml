@@ -1,0 +1,35 @@
+# PyRadiomics Extraction Configuration
+# =============================================================================
+# Settings for high-dimensional feature extraction in ischemic lesions.
+
+setting:
+  # Normalization
+  normalize: true
+  normalizeScale: [REDACTED_SCALE]
+  
+  # Resampling
+  interpolator: 'sitkBSpline'
+  resampledPixelSpacing: [1, 1, 1]
+  
+  # Image discretization
+  binWidth: [THRESHOLD_BIN_WIDTH]
+  
+  # Geometry
+  force2D: false
+  label: 1
+
+# Feature classes to calculate
+featureClass:
+  shape:
+  firstorder:
+  glcm:  # Gray Level Co-occurrence Matrix
+  glrlm: # Gray Level Run Length Matrix
+  glszm: # Gray Level Size Zone Matrix
+  gldm:  # Gray Level Dependence Matrix
+
+# Image types to extract from
+imageType:
+  Original: {}
+  LoG:
+    sigma: [1.0, 3.0, 5.0]
+  Wavelet: {}

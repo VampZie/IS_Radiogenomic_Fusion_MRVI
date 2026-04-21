@@ -1,0 +1,26 @@
+# IS_Radiogenomic_Fusion_MRVI | .gitignore
+
+# Imaging data
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+
+# Molecular data
+*.h5ad
+*.loom
+*.rds
+
+# Python
+__pycache__/
+*.pyc
+
+# Local Configs
+.env
+local_settings.py
+
+# Large results
+results/
+outputs/
+*.csv
+*.xlsx
