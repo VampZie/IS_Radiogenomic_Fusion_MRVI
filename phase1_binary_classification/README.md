@@ -5,7 +5,7 @@ Phase 1 implements the foundational **Binary Classification Ensemble** used to d
 
 ## 🛠️ Key Components
 
-### 1. The Juror Ensemble
+### 1. The Ensemble
 A high-throughput ensemble consisting of three state-of-the-art architectures:
 - **ConvNeXt-Tiny**: For advanced spatial feature extraction.
 - **DenseNet-121**: For dense feature reuse.
