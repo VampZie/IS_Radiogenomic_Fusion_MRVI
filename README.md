@@ -111,6 +111,7 @@ IS_Radiogenomic_Fusion_MRVI/
 ## 📜 Legal & IP Attribution
 
 - **Principal Architect:** **Vidit Zainith ([@VampZie](https://github.com/VampZie))**
+- **ACADEMIC GUIDANCE & RESEARCH MENTORSHIP**: **Mr. Aloush Ali Gharib  ([@Ali Gharib Gharib](https://github.com/aloush-ali-gharib))**,  provided reserach and methodological guidance throughout the project, including research discussions, critical feedback, methodological refinement, and scientific direction. Their contribution is formally acknowledged as research guidance and mentorship, while the computational architecture and implementation.
 - **Temporal Attribution:** Methodological archive established as of **April 21, 2026**.
 - **Portfolio Reference:** This repository is a high-fidelity methodological demonstration of clinical radiogenomic fusion.
 
