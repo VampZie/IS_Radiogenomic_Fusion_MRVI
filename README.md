@@ -108,12 +108,12 @@ IS_Radiogenomic_Fusion_MRVI/
 ---
 
 
-## 📜 Legal & IP Attribution
+## 🤝 Acknowledgments & Project Status
 
-- **Principal Architect:** **Vidit Zainith ([@VampZie](https://github.com/VampZie))**
-- **ACADEMIC GUIDANCE & RESEARCH MENTORSHIP**: **Mr. Aloush Ali Gharib  ([@Ali Gharib Gharib](https://github.com/aloush-ali-gharib))**,  provided reserach and methodological guidance throughout the project, including research discussions, critical feedback, methodological refinement, and scientific direction. Their contribution is formally acknowledged as research guidance and mentorship, while the computational architecture and implementation.
-- **Temporal Attribution:** Methodological archive established as of **April 21, 2026**.
-- **Portfolio Reference:** This repository is a high-fidelity methodological demonstration of clinical radiogenomic fusion.
+- **Principal Computational Architect:** Vidit Zainith ([@VampZie](https://github.com/VampZie))
+- **Academic Guidance & Mentorship:** Mr. Aloush Ali Gharib ([@aloush-ali-gharib](https://github.com/aloush-ali-gharib)), who provided valuable research discussions, critical feedback, methodological refinement, and scientific direction throughout this project.
+- **Project Status:** This repository serves as a high-fidelity methodological demonstration of clinical radiogenomic fusion for professional portfolio purposes. To protect ongoing research, specific biological thresholds and raw data have been omitted or replaced with synthetic examples, while the core pipeline architecture remains fully intact for technical review.
+- **License:** This project is shared under the [MIT License](LICENSE) for educational and reference purposes.
 
 ---
 <div align="center">
